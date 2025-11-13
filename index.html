@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>マーケットバリュー最大化プロジェクト｜月次行動計画（チェック付）</title>
+<style>
+  :root{--bg:#f5f7fa;--card:#fff;--ink:#2c3e50;--muted:#6b7280;--acc:#3498db}
+  body{font-family:'Segoe UI',system-ui,-apple-system; background:var(--bg); margin:0}
+  header{background:#34495e;color:#fff;text-align:center;padding:18px}
+  h1{margin:0;font-size:20px;letter-spacing:.5px}
+  .sub{opacity:.9;margin-top:6px;font-size:13px}
+  .toolbar{display:flex;gap:8px;justify-content:center;align-items:center;padding:10px;flex-wrap:wrap}
+  .btn{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:8px 12px;cursor:pointer}
+  .container{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:18px;padding:20px;max-width:1240px;margin:0 auto}
+  .card{background:var(--card);border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.08);padding:16px}
+  .month{font-weight:700;color:var(--ink);border-left:5px solid var(--acc);padding-left:10px;margin-bottom:8px}
+  .section-title{color:#374151;font-weight:700;margin-top:10px}
+  ul{list-style:none;padding-left:0;margin:6px 0}
+  li.task{display:flex;align-items:flex-start;gap:8px;padding:6px 8px;border-radius:6px}
+  li.task:hover{background:#f0f6ff}
+  .task input[type="checkbox"]{margin-top:2px;transform:scale(1.1)}
+  .task.completed{opacity:.65;text-decoration:line-through}
+  .hint{font-size:12px;color:#6b7280;margin-top:6px}
+  footer{color:#94a3b8;text-align:center;font-size:12px;padding:18px}
+  .goals{background:#e8f4ff;border-radius:8px;padding:8px 10px;margin-top:8px}
+  .goals .section-title{margin-top:0}
+</style>
+</head>
+<body>
+<header>
+  <h1>1年間でマーケットバリューを最大化する月次行動計画</h1>
+  <div class="sub">AI × 企画設計 × 自動化｜チェックは自動保存（端末・ブラウザ単位）</div>
+</header>
+
+<div class="toolbar">
+  <button class="btn" id="checkAll">全チェック</button>
+  <button class="btn" id="uncheckAll">全解除</button>
+  <span class="hint">※月ごとに「学習／実践／成果指標／月間目標」を設定</span>
+</div>
+
+<div class="container">
+
+  <!-- 1ヶ月目 -->
+  <div class="card" data-month="M1">
+    <div class="month">1ヶ月目｜環境整備 & 基礎固め</div>
+    <div class="section-title">📘 学習（スキル）</div>
+    <ul>
+      <li class="task" data-section="learn">Python基礎復習（条件分岐・関数・例外）</li>
+      <li class="task" data-section="learn">Seleniumでログイン〜クリックの基本操作</li>
+      <li class="task" data-section="learn">pandasでExcel入出力（openpyxl）</li>
+    </ul>
+    <div class="section-title">⚙️ 実践（社内/発信）</div>
+    <ul>
+      <li class="task" data-section="do">手動業務の棚卸し（10件）と所要時間計測</li>
+      <li class="task" data-section="do">改善対象トップ3を選定し要件定義ドラフト</li>
+      <li class="task" data-section="do">Xに学習ログ4投稿／note1本</li>
+    </ul>
+    <div class="section-title">📊 成果指標</div>
+    <ul>
+      <li class="task" data-section="kpi">自動化対象3件の要件定義完成</li>
+      <li class="task" data-section="kpi">学習時間30h達成</li>
+    </ul>
+    <div class="goals">
+      <div class="section-title">🎯 月間目標</div>
+      <ul>
+        <li class="task" data-section="goal">「棚卸しシート」テンプレ公開（社内）</li>
+        <li class="task" data-section="goal">Xフォロワー +30 / 投稿4本</li>
+      </ul>
+    </div>
+    <div class="hint">※目標はSMART：具体・測定・達成・関連・期限</div>
+  </div>
+
+  <!-- 2ヶ月目 -->
+  <div class="card" data-month="M2">
+    <div class="month">2ヶ月目｜試作用ミニ自動化</div>
+    <div class="section-title">📘 学習</div>
+    <ul>
+      <li class="task" data-section="learn">Selenium＋待機（WebDriverWait）の安定化</li>
+      <li class="task" data-section="learn">ログ設計・例外処理・スクショ保存</li>
+      <li class="task" data-section="learn">GitHub基本（init / commit / push）</li>
+    </ul>
+    <div class="section-title">⚙️ 実践</div>
+    <ul>
+      <li class="task" data-section="do">Excel→Web操作のパイロット自動化を1本作成</li>
+      <li class="task" data-section="do">操作動画＋READMEで共有</li>
+      <li class="task" data-section="do">X4投稿／note1本（失敗学含む）</li>
+    </ul>
+    <div class="section-title">📊 成果指標</div>
+    <ul>
+      <li class="task" data-section="kpi">パイロットで月10時間の作業削減見込み</li>
+      <li class="task" data-section="kpi">社内3名からフィードバック取得</li>
+    </ul>
+    <div class="goals">
+      <div class="section-title">🎯 月間目標</div>
+      <ul>
+        <li class="task" data-section="goal">自動化v0.1リリース</li>
+        <li class="task" data-section="goal">フォロワー +40 / 投稿4本</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3ヶ月目 -->
+  <div class="card" data-month="M3">
+    <div class="month">3ヶ月目｜小規模運用 & 可視化</div>
+    <div class="section-title">📘 学習</div>
+    <ul>
+      <li class="task" data-section="learn">Google Sheets API 連携</li>
+      <li class="task" data-section="learn">HTML/CSSで簡易ダッシュボード作成</li>
+      <li class="task" data-section="learn">要件定義→試験項目書の流れ</li>
+    </ul>
+    <div class="section-title">⚙️ 実践</div>
+    <ul>
+      <li class="task" data-section="do">KPI可視化（処理件数・工数削減）を作成</li>
+      <li class="task" data-section="do">小規模ユーザー5名で運用テスト</li>
+      <li class="task" data-section="do">事例まとめ記事を社内共有</li>
+    </ul>
+    <div class="section-title">📊 成果指標</div>
+    <ul>
+      <li class="task" data-section="kpi">実測で月10h削減を達成</li>
+      <li class="task" data-section="kpi">不具合率 < 2% で安定稼働</li>
+    </ul>
+    <div class="goals">
+      <div class="section-title">🎯 月間目標</div>
+      <ul>
+        <li class="task" data-section="goal">社内LTで成果共有（5分）</li>
+        <li class="task" data-section="goal">フォロワー +50 / 投稿4本</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 4ヶ月目 -->
+  <div class="card" data-month="M4">
+    <div class="month">4ヶ月目｜BPR設計 & 手順自動生成</div>
+    <div class="section-title">📘 学習</div>
+    <ul>
+      <li class="task" data-section="learn">BPR/RPA概論・業務フロー図（BPMN）</li>
+      <li class="task" data-section="learn">プロンプト設計で手順書自動生成</li>
+      <li class="task" data-section="learn">例外パターン設計（リトライ戦略）</li>
+    </ul>
+    <div class="section-title">⚙️ 実践</div>
+    <ul>
+      <li class="task" data-section="do">業務フローAs-Is/To-Beを作成</li>
+      <li class="task" data-section="do">手順書生成Bot（Dify/ChatGPT）試作</li>
+      <li class="task" data-section="do">改善効果のROI試算（人件費換算）</li>
+    </ul>
+    <div class="section-title">📊 成果指標</div>
+    <ul>
+      <li class="task" data-section="kpi">手順書作成時間を50%短縮</li>
+      <li class="task" data-section="kpi">関係者レビュー3名以上完了</li>
+    </ul>
+    <div class="goals"><div class="section-title">🎯 月間目標</div>
+      <ul>
+        <li class="task" data-section="goal">手順書Bot v0 公開</li>
+        <li class="task" data-section="goal">フォロワー +60 / 投稿4本</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5ヶ月目 -->
+  <div class="card" data-month="M5">
+    <div class="month">5ヶ月目｜正式運用に向けた安定化</div>
+    <div class="section-title">📘 学習</div>
+    <ul>
+      <li class="task" data-section="learn">ログ基盤（構造化ログ/通知）</li>
+      <li class="task" data-section="learn">設定外出し（YAML/JSON）</li>
+      <li class="task" data-section="learn">簡易UI（Streamlit）</li>
+    </ul>
+    <div class="section-title">⚙️ 実践</div>
+    <ul>
+      <li class="task" data-section="do">通知（Slack/メール）連携</li>
+      <li class="task" data-section="do">設定ファイル化＆環境変数対応</li>
+      <li class="task" data-section="do">ユーザーマニュアル整備</li>
+    </ul>
+    <div class="section-title">📊 成果指標</div>
+    <ul>
+      <li class="task" data-section="kpi">障害発生→復旧平均30分以内</li>
+      <li class="task" data-section="kpi">運用担当の自走化（引継ぎ完了）</li>
+    </ul>
+    <div class="goals"><div class="section-title">🎯 月間目標</div>
+      <ul>
+        <li class="task" data-section="goal">正式運用Goサイン取得</li>
+        <li class="task" data-section="goal">フォロワー +60 / 投稿4本</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 6ヶ月目 -->
+  <div class="card" data-month="M6">
+    <div class="month">6ヶ月目｜実績公開 & ポートフォリオv1</div>
+    <div class="section-title">📘 学習</div>
+    <ul>
+      <li class="task" data-section="learn">事例記事の構成（課題→解決→効果）</li>
+      <li class="task" data-section="learn">成果可視化（グラフ・数表の見せ方）</li>
+      <li class="task" data-section="learn">著作権/機密情報配慮</li>
+    </ul>
+    <div class="section-title">⚙️ 実践</div>
+    <ul>
+      <li class="task" data-section="do">GitHubポートフォリオv1公開（ダミーデータ）</li>
+      <li class="task" data-section="do">社内外向けスライド10枚作成</li>
+      <li class="task" data-section="do">X連載開始（全4回）</li>
+    </ul>
+    <div class="section-title">📊 成果指標</div>
+    <ul>
+      <li class="task" data-section="kpi">問い合わせ/相談 1件以上</li>
+      <li class="task" data-section="kpi">記事合計インプレッション5,000+</li>
+    </ul>
+    <div class="goals"><div class="section-title">🎯 月間目標</div>
+      <ul>
+        <li class="task" data-section="goal">社内LT10分で登壇</li>
+        <li class="task" data-section="goal">フォロワー +80 / 投稿6本</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 7ヶ月目 -->
+  <div class="card" data-month="M7">
+    <div class="month">7ヶ月目｜応用：API連携・外部データ取得</div>
+    <div class="section-title">📘 学習</div>
+    <ul>
+      <li class="task" data-section="learn">外部APIの認証/レート制御</li>
+      <li class="task" data-section="learn">ジョブ設計（スケジューラ）</li>
+      <li class="task" data-section="learn">例外データの検知ロジック</li>
+    </ul>
+    <div class="section-title">⚙️ 実践</div>
+    <ul>
+      <li class="task" data-section="do">社内ダッシュボードに外部データ統合</li>
+      <li class="task" data-section="do">隔日バッチの自動実行</li>
+      <li class="task" data-section="do">アラート閾値のチューニング</li>
+    </ul>
+    <div class="section-title">📊 成果指標</div>
+    <ul>
+      <li class="task" data-section="kpi">精度95%以上で安定稼働</li>
+      <li class="task" data-section="kpi">担当外2部署に価値提供</li>
+    </ul>
+    <div class="goals"><div class="section-title">🎯 月間目標</div>
+      <ul>
+        <li class="task" data-section="goal">外部連携の事例記事公開</li>
+        <li class="task" data-section="goal">フォロワー +90 / 投稿6本</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 8ヶ月目 -->
+  <div class="card" data-month="M8">
+    <div class="month">8ヶ月目｜副業トライ & 提案営業</div>
+    <div class="section-title">📘 学習</div>
+    <ul>
+      <li class="task" data-section="learn">提案書テンプレ/見積の作り方</li>
+      <li class="task" data-section="learn">契約・NDAの基本</li>
+      <li class="task" data-section="learn">顧客ヒアリング術</li>
+    </ul>
+    <div class="section-title">⚙️ 実践</div>
+    <ul>
+      <li class="task" data-section="do">副業募集に応募 or 相談投稿を実施</li>
+      <li class="task" data-section="do">ミニPoCを1件提案（無料〜低単価）</li>
+      <li class="task" data-section="do">提案〜納品フローのチェックリスト作成</li>
+    </ul>
+    <div class="section-title">📊 成果指標</div>
+    <ul>
+      <li class="task" data-section="kpi">面談/打診 2件以上</li>
+      <li class="task" data-section="kpi">PoC受注 1件以上</li>
+    </ul>
+    <div class="goals"><div class="section-title">🎯 月間目標</div>
+      <ul>
+        <li class="task" data-section="goal">3万円以上の受注</li>
+        <li class="task" data-section="goal">フォロワー +100 / 投稿6本</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 9ヶ月目 -->
+  <div class="card" data-month="M9">
+    <div class="month">9ヶ月目｜社内横展開 & 標準化</div>
+    <div class="section-title">📘 学習</div>
+    <ul>
+      <li class="task" data-section="learn">テンプレ化・モジュール設計</li>
+      <li class="task" data-section="learn">教育資料/ワークショップ設計</li>
+      <li class="task" data-section="learn">品質保証（テスト自動化入門）</li>
+    </ul>
+    <div class="section-title">⚙️ 実践</div>
+    <ul>
+      <li class="task" data-section="do">共通テンプレ/ガイドラインを公開</li>
+      <li class="task" data-section="do">社内WSを企画実施（60分）</li>
+      <li class="task" data-section="do">問い合わせ対応フローの整備</li>
+    </ul>
+    <div class="section-title">📊 成果指標</div>
+    <ul>
+      <li class="task" data-section="kpi">テンプレの社内ダウンロード20件</li>
+      <li class="task" data-section="kpi">導入部門 3→5部門へ拡大</li>
+    </ul>
+    <div class="goals"><div class="section-title">🎯 月間目標</div>
+      <ul>
+        <li class="task" data-section="goal">WS満足度4.5/5以上</li>
+        <li class="task" data-section="goal">フォロワー +120 / 投稿6本</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 10ヶ月目 -->
+  <div class="card" data-month="M10">
+    <div class="month">10ヶ月目｜ポートフォリオv2 & 面談準備</div>
+    <div class="section-title">📘 学習</div>
+    <ul>
+      <li class="task" data-section="learn">成果物ストーリーテリング</li>
+      <li class="task" data-section="learn">面接想定問答・STAR法</li>
+      <li class="task" data-section="learn">市場調査（SaaS/AI/EdTech）</li>
+    </ul>
+    <div class="section-title">⚙️ 実践</div>
+    <ul>
+      <li class="task" data-section="do">成果を業績指標で整理（削減h/金額換算）</li>
+      <li class="task" data-section="do">ポートフォリオv2（Web）に更新</li>
+      <li class="task" data-section="do">Wantedly/LinkedInのプロフ刷新</li>
+    </ul>
+    <div class="section-title">📊 成果指標</div>
+    <ul>
+      <li class="task" data-section="kpi">スカウト/DM 5件以上</li>
+      <li class="task" data-section="kpi">面談打診 2件以上</li>
+    </ul>
+    <div class="goals"><div class="section-title">🎯 月間目標</div>
+      <ul>
+        <li class="task" data-section="goal">想定質問50問に回答用意</li>
+        <li class="task" data-section="goal">フォロワー +130 / 投稿6本</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 11ヶ月目 -->
+  <div class="card" data-month="M11">
+    <div class="month">11ヶ月目｜交渉準備 & 収益多角化</div>
+    <div class="section-title">📘 学習</div>
+    <ul>
+      <li class="task" data-section="learn">オファー交渉（年収/稼働/リモート）</li>
+      <li class="task" data-section="learn">契約形態（準委任/請負）</li>
+      <li class="task" data-section="learn">見積根拠（時間単価×難易度）</li>
+    </ul>
+    <div class="section-title">⚙️ 実践</div>
+    <ul>
+      <li class="task" data-section="do">副業メニュー表（価格表）公開</li>
+      <li class="task" data-section="do">面談ロープレ2回実施（録音→振り返り）</li>
+      <li class="task" data-section="do">事例スライド英語版ミニ作成</li>
+    </ul>
+    <div class="section-title">📊 成果指標</div>
+    <ul>
+      <li class="task" data-section="kpi">副業収益 月5万円達成</li>
+      <li class="task" data-section="kpi">面談通過率 40%以上</li>
+    </ul>
+    <div class="goals"><div class="section-title">🎯 月間目標</div>
+      <ul>
+        <li class="task" data-section="goal">想定年収レンジ＋100〜150万円の裏取り</li>
+        <li class="task" data-section="goal">フォロワー +140 / 投稿6本</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 12ヶ月目 -->
+  <div class="card" data-month="M12">
+    <div class="month">12ヶ月目｜意思決定 & 次年度設計</div>
+    <div class="section-title">📘 学習</div>
+    <ul>
+      <li class="task" data-section="learn">振り返り手法（KPT/ギャップ分析）</li>
+      <li class="task" data-section="learn">キャリア戦略再設計（3年ロードマップ）</li>
+      <li class="task" data-section="learn">PR資料の磨き込み</li>
+    </ul>
+    <div class="section-title">⚙️ 実践</div>
+    <ul>
+      <li class="task" data-section="do">社内昇進/異動・副業拡大・転職の意思決定</li>
+      <li class="task" data-section="do">次年度OKR/行動計画を策定</li>
+      <li class="task" data-section="do">成果まとめ記事（年間総括）公開</li>
+    </ul>
+    <div class="section-title">📊 成果指標</div>
+    <ul>
+      <li class="task" data-section="kpi">オファー/スカウト10件以上</li>
+      <li class="task" data-section="kpi">市場評価レンジ更新（年収提示）</li>
+    </ul>
+    <div class="goals"><div class="section-title">🎯 月間目標</div>
+      <ul>
+        <li class="task" data-section="goal">最終意思決定の実行（契約/辞令/応募）</li>
+        <li class="task" data-section="goal">フォロワー 通年+1,000 到達</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<footer>© 2025 マーケットバリュー最大化プロジェクト｜Created by ChatGPT × 中村</footer>
+
+<script>
+/** チェック保存（localStorage） */
+(function(){
+  const STORAGE_PREFIX="mv_month_task_";
+  const taskNodes=[...document.querySelectorAll("li.task")];
+
+  const keyOf=(li)=>{
+    const m=li.closest(".card")?.dataset.month||"M?";
+    const sec=li.dataset.section||"sec";
+    const text=li.textContent.trim();
+    return STORAGE_PREFIX+btoa(`${m}::${sec}::${text}`);
+  };
+
+  // 初期化：チェックボックス付与＆復元
+  taskNodes.forEach(li=>{
+    const key=keyOf(li);
+    const label=document.createElement("label"); label.style.flex="1"; label.style.cursor="pointer";
+    const span=document.createElement("span"); span.textContent=li.textContent.trim();
+    li.textContent="";
+    const cb=document.createElement("input"); cb.type="checkbox"; cb.ariaLabel=span.textContent;
+
+    const saved=localStorage.getItem(key);
+    if(saved==="1"){ cb.checked=true; li.classList.add("completed"); }
+
+    cb.addEventListener("change",()=>{
+      if(cb.checked){ localStorage.setItem(key,"1"); li.classList.add("completed"); }
+      else{ localStorage.removeItem(key); li.classList.remove("completed"); }
+    });
+
+    li.prepend(cb); label.appendChild(span); li.appendChild(label);
+  });
+
+  // 全チェック/全解除
+  const setAll=(checked)=>{
+    taskNodes.forEach(li=>{
+      const cb=li.querySelector('input[type="checkbox"]');
+      if(!cb) return;
+      cb.checked=checked;
+      const key=keyOf(li);
+      if(checked){ localStorage.setItem(key,"1"); li.classList.add("completed"); }
+      else{ localStorage.removeItem(key); li.classList.remove("completed"); }
+    });
+  };
+  document.getElementById("checkAll")?.addEventListener("click",()=>setAll(true));
+  document.getElementById("uncheckAll")?.addEventListener("click",()=>setAll(false));
+})();
+</script>
+</body>
+</html>
